@@ -64,14 +64,22 @@ class PublicController extends Controller
     public function newMessage(Request $data)
     {
         $this->validate($data, [
-            'name' => ['required', 'string', 'max:60'],
-            'email' => ['required', 'string', 'max:60'],
-            'phone' => ['string', 'max:40'],
-            'message' => ['required', 'string'],
+            'time' => 'nullable|integer',
+            'name' => 'required|string|max:60',
+            'email' => 'required|string|max:60',
+            'phone' => 'string|max:40',
+            'message' => 'required|string',
         ]);
-        DB::table('messages')->insert(
-            ['email' => $data->email, 'phone' => $data->phone, 'name' => $data->name, 'message' => $data->message, 'is_read' => 0]
-        );   
-        return redirect()->back()->with('success', 'Mensaje enviado');
+        if(($data->time < 1)or(!isset($data->time)))
+        {
+            return redirect()->back();
+        }
+        else
+        {
+            DB::table('messages')->insert(
+                ['email' => $data->email, 'phone' => $data->phone, 'name' => $data->name, 'message' => $data->message, 'is_read' => 0]
+            );
+            return redirect()->back()->with('success', 'Mensaje enviado');
+        }
     }
 }
