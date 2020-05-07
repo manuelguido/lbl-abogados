@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="main-navbar navbar navbar-expand-xl navbar-dark shadow-none fixed-top">
+<nav class="main-navbar navbar navbar-expand-lg navbar-dark shadow-none fixed-top">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             LB&L Abogados
