@@ -129,12 +129,12 @@ p {
     font-weight: 400;
 }
     /* Links */
-a, .link {
+.link {
     transition: 0.08s all !important;
     color: var(--link);
     cursor: pointer;
 }
-a:hover, .link:hover {
+.link:hover {
     color: var(--link-dark) !important;
 }
 .r-link {
@@ -170,9 +170,6 @@ a:hover, .link:hover {
 .btn i {
     color: inherit !important;
 }
-.btn:hover {
-    opacity: 0.8 !important;
-}
     /* Rounded */
 .btn-rounded {
     border-radius: 50px !important;
@@ -180,6 +177,7 @@ a:hover, .link:hover {
     /* Color */
 .btn-primary {
     background-color: var(--primary) !important;
+    color: white !important;
 }
 .btn-primary-dark {
     color: var(--white-1) !important;
@@ -449,7 +447,8 @@ a:hover, .link:hover {
 .news-card {
     background: rgba(81, 67, 222, .018) !important;
     box-shadow: none !important;
-    border-bottom: 1px solid #ddd !important;
+    border-radius: 5px !important;
+    border: 1px solid #eee !important;
 }
 .news-card, .news-card:hover p, .news-card:hover h2 {
     transition: .18s all !important;
@@ -512,9 +511,12 @@ a:hover, .link:hover {
 /*--------------------------------------------------------------
     About Us Page
 --------------------------------------------------------------*/
-.about-card img {
-    max-height: 400px !important;
+@media(min-width: 1200px){
+    .about-card {
+        height: 100% !important;
+    }
 }
+
 
 /*--------------------------------------------------------------
     Contact Page

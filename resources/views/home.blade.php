@@ -93,11 +93,11 @@
         <!-- Grid row -->
         <div class="row row-eq-height">
             <!-- Noticias -->
-            <div class="col-12 col-lg-3 mb-5 mb-lg-0">
+            <div class="col-12 col-xl-3 mb-5 mb-lg-0">
                 <!-- Card -->
-                <div class="card card-bordered" style="min-height: 800px;">
+                <div class="card card-bordered">
                     <div class="card-header bg-none border-none">
-                        <h1 class="h4 color5 w500">Noticias</h1>
+                        <h1 class="h4 color5 w500 display-inline">Noticias</h1>
                         <hr>
                     </div>
                     <!-- Card body -->
@@ -113,6 +113,7 @@
                                     </a>
                                 </div>
                             @endforeach
+                            <a class="btn btn-primary mb-4 mt-2" href="{{ url('noticias') }}">Ver todas</a>
                         </div>
                     </div>
                     <!-- /.Card body -->
@@ -123,7 +124,7 @@
             <div class="col-12 col-lg-9">
                 <div class="row row-eq-height">                    
                     <!-- Temas -->
-                    <div class="col-12 col-lg-8">
+                    <div class="col-12 col-xl-8">
                         <!-- Links -->
                         <h5 class="black2 text-uppercase w600">Nuestras áreas de trabajo</h5>
                         <hr>
@@ -151,7 +152,7 @@
                         </div>
                     </div>
                     <!-- Buttons -->
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-xl-4">
                         <div class="row">
                             <div class="col-12 text-center mt-5">
                                 <a href="/sobre_nosotros" class="home-card card">
@@ -194,7 +195,7 @@
                         </div>
                         <hr>
                         <div class="row justify-content-center mb-5">
-                            <div class="col-12 col-lg-3 mb-4">
+                            <div class="col-12 col-xl-3 mb-4">
                                 <div class="list-group" id="myTab" role="tablist">
                                     @php $i=0; @endphp
                                     @foreach($topics as $topic)
@@ -208,19 +209,19 @@
                                     <a href="/faqs" class="primary">Ir a preguntas frecuentes</a>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-9">
+                            <div class="col-12 col-xl-9">
                                 <ul class="nav nav-tabs">
                                     <li class="nav-item">
                                         <a id="faq-title" class="nav-link active cursor-d">Todas</a>
                                     </li>
                                 </ul>
-                                <div class="tab-content px-4 px-lg-0" id="myTabContent">
+                                <div class="tab-content px-4 px-xl-0" id="myTabContent">
                                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                         @foreach($topics as $topic)
                                         @if (count($faqs->where('topic_name', $topic->topic_name)) > 0)
                                         <div class="row mt-4 faq-list display-none">
                                             @foreach ($faqs->where('topic_name', $topic->topic_name) as $faq)
-                                            <div class="col-12 col-lg-10 mb-4">
+                                            <div class="col-12 col-xl-10 mb-4">
                                                 <h2 class="h7">
                                                 <span class="h6 w500 primary-dark mb-0 text-uppercase pt-0">{{$faq->question}}</span><br class="mb-3">
                                                 <span class="p black1 mb-5">{!!$faq->answer!!}</span>

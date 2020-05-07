@@ -11,7 +11,7 @@
     <div class="container-fluid pt-5 pb-3 mt-xl-5 my-3 mb-5">
         <div class="row px-xl-5 justify-content-xl-center">
           <div class="col-12 col-xl-8 mt-5">
-            <a href="/noticias" class="link h6"><i class="fas fa-arrow-left mr-2 primary"></i>Volver a noticias</a>
+            <a href="{{ url('noticias') }}" class="link"><i class="fas fa-chevron-left mr-2 primary"></i>Volver a noticias</a>
           </div>
             <div class="col-12 col-xl-8 mt-5">
                 <h1 class="h3 w600 primary-dark">{{$new->title}}</h1>

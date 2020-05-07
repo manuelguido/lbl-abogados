@@ -13,7 +13,7 @@ class PublicController extends Controller
     public function showHome()
     {
         return view('home',[
-            'news' => DB::table('posts')->orderByRaw('date DESC')->limit(8)->get(),
+            'news' => DB::table('posts')->orderByRaw('date DESC')->limit(4)->get(),
             'areas' => DB::table('areas')->orderByRaw('area_id DESC')->get(),
             'faqs' => FAQ::allWithTopicsOrdered(),
             'topics' => Topic::allOrdered(),

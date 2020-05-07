@@ -49,38 +49,40 @@
     </div>
     <!-- Full Page Intro -->
 
-    <div class="container pb-5">
-        <div class="row py-5">
-            <div class="col-md-12">
-                <h1 class="h3">Sobre nosotros</h1>
+    <div class="container-fluid pb-5">
+        <div class="row py-5 justify-content-center">
+            <div class="col-12 col-xl-9 py-5">
+                <h1 class="h2 w500 primary-dark">Sobre Nosotros</h1>
+                <hr class="my-3">
             </div>
-        </div>
-        <div class="row mb-5">
-            
-            @foreach ($people as $person)
-            <div class="col-lg-4">
-                <div class="card overflow-show">
-                    <div class="card-body p-0 overflow-show">
-                        <div class="row p-0 m-0">
-                            <div class="col-4 col-md-12 p-0 m-0">
-                                <!-- Card image -->
-                                <img class="card-img-top" src="{{ asset('storage/people/'.$person->img) }}">
-                            </div>
-                            <div class="col-8 col-md-12 p-3">
-                                <!-- Title -->
-                                <h1 class="h4 primary-dark w600 my-0">{{$person->name}}</h1>
-                                <hr>
-                                <!-- Text -->
-                                <h2 class="h5 w500 primary text-uppercase mb-4">{{$person->title}}</h2>
-                                <p class="h6 w400 black1 mb-3">{{$person->collegue}}</p>
-                                <p class="h6 w400 black2">{{$person->admissions}}</p>
+            <div class="col-12 col-xl-9">
+                <div class="row mb-5">
+                    @foreach ($people as $person)
+                    <div class="col-xl-4">
+                        <div class="card about-card overflow-show mb-5 shadow">
+                            <div class="card-body p-0 overflow-show">
+                                <div class="row p-0 m-0">
+                                    <div class="col-4 col-xl-12 p-0 m-0">
+                                        <!-- Card image -->
+                                        <img class="card-img-top" src="{{ asset('storage/people/'.$person->img) }}">
+                                    </div>
+                                    <div class="col-8 col-xl-12 p-4">
+                                        <!-- Title -->
+                                        <h1 class="h4 primary-dark">{{$person->name}}</h1>
+                                        <hr>
+                                        <!-- Text -->
+                                        <h2 class="h5 w500 primary text-uppercase mb-4">{{$person->title}}</h2>
+                                        <p class="h6 w400 black1 mb-3">{{$person->collegue}}</p>
+                                        <p class="h6 w400 black2">{{$person->admissions}}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    @endforeach
+        
                 </div>
             </div>
-            @endforeach
-
         </div>
     </div>
 
