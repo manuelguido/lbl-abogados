@@ -560,12 +560,14 @@ p {
 }
 .whatsapp-box {
     position: relative !important;
-    margin-top: 18%;
-    padding: 27% 0;
-    border-left: 1px solid #f0f0f0;
 }
 .whatsapp-box:hover i {
     color: var(--white-1) !important;
+}
+@media(min-width: 1200px){
+    .whatsapp-box {
+        border-left: 1px solid #f0f0f0;
+    }
 }
 /*--------------------------------------------------------------
     Login page

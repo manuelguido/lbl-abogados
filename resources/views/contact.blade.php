@@ -106,11 +106,16 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <div class="col-12 col-md-6 text-center">
-                                        <div class="whatsapp-box">
-                                            <h1 class="h4 mt-auto mb-3 align-middle">O chatea con nosotros!</h1>
-                                            <a target="_blank" href="https://api.whatsapp.com/send?phone=+5491125034400&text=Hola, quisiera consultar sobre" class="btn btn-success m-0 w600"><i class="fab fa-whatsapp fa-lg white1 mr-2"></i>Whatsapp</a>
+                                    <div class="col-12 col-xl-6 text-xl-center py-xl-5">
+                                        <div class="whatsapp-box mt-5 py-xl-5">
+                                            <h1 class="h5 mt-auto mb-2 align-middle">Podes mandarnos un whatsapp</h1>
+                                            <a target="_blank" href="https://api.whatsapp.com/send?phone=+5491125034400&text=Hola, quisiera consultar sobre" class="btn btn-success mx-0 mb-4 mb-xl-5 w600"><i class="fab fa-whatsapp fa-lg white1 mr-2"></i>Whatsapp</a>
+                                            <h1 class="h5 mt-auto mb-2 align-middle">o buscanos en instagram</h1>
+                                            <a href="https://www.instagram.com/lblabogados/" target="_blank" class="btn peach-gradient mx-0 mb-4">
+                                                <i class="fab fa-instagram mr-2 white1"></i>@lblabogados
+                                            </a>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>

@@ -15,7 +15,6 @@ class CreateMessageTable extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->smallIncrements('id');
-            $table->timestamp('date')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->string('name', 60);
             $table->string('email', 60);
             $table->string('phone', 40);

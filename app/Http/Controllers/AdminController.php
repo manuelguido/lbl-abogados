@@ -331,21 +331,22 @@ class AdminController extends Controller
     --------------------------------------------------------------*/
     public function showMessages()
     {
+        $messages = Message::orderBy('created_at', 'DESC')->get();
         return view('admin/panel_messages',[
-            'messages' => Message::all(),
+            'messages' => $messages,
         ]);
     }
     
     public function showMessage($id)
     {
+        $message = Message::where('messages.id', '=', $id)->get()->first();
         return view('admin/panel_message',[
-            'message' => Message::where('messages.id', '=', $id)->get()->first(),
+            'message' => $message,
         ]);
     }
 
     public function readMessage($id)
-    {
-        
+    {   
         $message = Message::where('messages.id', '=', $id)->get()->first();
         if($message->is_read == 1) {
             $message->is_read = 0;
@@ -358,15 +359,6 @@ class AdminController extends Controller
         $message->save();
 
         return redirect()->back()->with('success', 'Mensaje marcado como'.$txt.' leído.');
-    }
-
-    public function unreadMessage($id)
-    {
-        $message = Message::find($id)->first();
-        $message->is_read = 0;
-        $message->save();
-
-        return redirect()->back()->with('success', 'Mensaje marcado como no leído.');
     }
 
     public function deleteMessage($id)

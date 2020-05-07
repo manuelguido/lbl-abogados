@@ -27,5 +27,10 @@
     <script src="{{ asset('js/mdb.min.js') }}"></script>
     <script src="{{ asset('js/popper.min.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+    <script>
+        $(".alert-fixed").fadeTo(3000, 500).slideUp(500, function(){
+            $(".alert-fixed").slideUp(500);
+        });
+    </script>
 </body>
 </html>

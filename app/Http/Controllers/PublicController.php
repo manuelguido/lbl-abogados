@@ -7,6 +7,7 @@ use DB;
 use App\Topic;
 use App\FAQ;
 use App\Person;
+use App\Message;
 
 class PublicController extends Controller
 {
@@ -64,21 +65,26 @@ class PublicController extends Controller
     public function newMessage(Request $data)
     {
         $this->validate($data, [
-            'time' => 'nullable|integer',
-            'name' => 'required|string|max:60',
-            'email' => 'required|string|max:60',
-            'phone' => 'string|max:40',
+            'time' => 'required|integer',
+            'name' => 'required|string',
+            'email' => 'required|string',
+            'phone' => 'string',
             'message' => 'required|string',
         ]);
         if(($data->time < 1)or(!isset($data->time)))
         {
+            dd($data->time);
             return redirect()->back();
         }
         else
         {
-            DB::table('messages')->insert(
-                ['email' => $data->email, 'phone' => $data->phone, 'name' => $data->name, 'message' => $data->message, 'is_read' => 0]
-            );
+            $message = new Message;
+            $message->name = $data->name;
+            $message->email = $data->email;
+            $message->phone = $data->phone;
+            $message->message = $data->message;
+            $message->is_read = 0;
+            $message->save();
             return redirect()->back()->with('success', 'Mensaje enviado');
         }
     }

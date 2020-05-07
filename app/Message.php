@@ -14,10 +14,10 @@ class Message extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'date', 'name', 'email', 'phone', 'message', 'is_read',
+        'name', 'email', 'phone', 'message', 'is_read',
     ];
 
-    public $timestamps = false;
+    public $timestamps = true;
 
     public static function unreadMessages()
     {

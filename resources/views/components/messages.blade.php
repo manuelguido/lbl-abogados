@@ -31,9 +31,3 @@
     </div>
 </div>
 @endif
-
-<script>
-    $(".alert-fixed").fadeTo(3100, 500).slideUp(500, function(){
-        $(".alert-fixed").slideUp(500);
-    });
-</script>
