@@ -11,6 +11,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
     <!-- Styles -->
+    <link rel="icon" type="image/png" href="{{ asset('img/artwork/favicon.webp') }}">
     <script src="https://kit.fontawesome.com/6a517933d5.js" crossorigin="anonymous"></script>
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/mdb.min.css') }}" rel="stylesheet">
