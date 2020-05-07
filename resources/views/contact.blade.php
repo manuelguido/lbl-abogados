@@ -52,7 +52,7 @@
 
 @include('components.whatsapp_icon')
 
-        <div class="contact-container" style="background-image: url('{{ asset('storage/site/'.$config->home_img) }}')">
+        <div class="contact-container" style="background-image: url('{{ asset('storage/site/'.$config->contact_img) }}')">
             <div class="container">
                 <!--Grid row-->
                 <div class="row wow fadeIn">
