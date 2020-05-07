@@ -55,7 +55,7 @@
         <div class="contact-container" style="background-image: url('{{ asset('storage/site/'.$config->contact_img) }}')">
             <div class="container">
                 <!--Grid row-->
-                <div class="row wow fadeIn">
+                <div class="row">
                     <div class="col-12">
                         <div class="card contact-card">
                             <div class="card-body p-5">
