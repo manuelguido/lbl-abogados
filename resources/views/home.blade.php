@@ -113,7 +113,7 @@
                                     </a>
                                 </div>
                             @endforeach
-                            <a class="btn btn-primary mb-4 mt-2" href="{{ url('noticias') }}">Ver todas</a>
+                            <a class="btn btn-primary mb-4 mt-2" href="{{ url('noticias') }}">Ver más</a>
                         </div>
                     </div>
                     <!-- /.Card body -->
@@ -130,6 +130,7 @@
                         <hr>
                         <div class="accordion home-accordion" id="tabsAccordion">
                             @foreach ($areas as $area)
+                                @if(strlen($area->description) > 10)
                                 <div class="card z-depth-0 card-bordered mt-2">
                                     <div class="card-header cursor-p bg-white1" id="tab"{{$area->area_id}}" data-toggle="collapse" data-target="#tabsCollapse{{$area->area_id}}" aria-expanded="false" aria-controls="tabsCollapse{{$area->area_id}}">
                                         <div class="row">
@@ -148,6 +149,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                @endif
                             @endforeach
                         </div>
                     </div>
