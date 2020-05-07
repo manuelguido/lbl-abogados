@@ -29,8 +29,10 @@ Route::prefix('admin')->group(function() {
 
     //Posts
     Route::get('/messages', 'AdminController@showMessages');
-    Route::get('/read_message/{id}', 'AdminController@readMessage');
-    Route::get('/delete_message/{id}', 'AdminController@deleteMessage');
+    Route::get('/message/{id}', 'AdminController@showMessage');
+    Route::post('/read_message/{id}', 'AdminController@readMessage');
+    Route::post('/unread_message/{id}', 'AdminController@unreadMessage');
+    Route::delete('/delete_message/{id}', 'AdminController@deleteMessage');
     
     //Topics
     Route::get('/topics', 'AdminController@showTopics');

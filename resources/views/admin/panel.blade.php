@@ -85,14 +85,16 @@
             </nav>
             <!--/.Navbar -->
             <header class="panel-header">
-                <div class="card-body p-4">
+                <div class="card-body px-5 py-4">
                     <h1 id="panel-title" class="my-0">@yield('panel-title')</h1>
                 </div>
             </header>
             @include('components.messages')
             <!-- Panel workplace -->
-            <div class="container-fluid w-100 p-3">
-                @yield('panel-content')
+            <div class="p-3 p-xl-4">
+                <div class="container-fluid w-100">
+                    @yield('panel-content')
+                </div>
             </div>
             <!-- /.Panel workplace -->
         </div>

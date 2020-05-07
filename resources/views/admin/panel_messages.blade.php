@@ -5,83 +5,71 @@
 @section('panel-content')
 <div class="row justify-content-center">
     
-    @if (count($unread_messages) == 0 and count($messages) == 0)
-    <div class="col-12 col-lg-8 mb-2">
-        <h1 class="h5 w400">No hay mensajes</h1>
+    <div class="col-12 my-3">
+        <h1 class="h6 w400">Mensajes recibidos</h1>
     </div>
-    @endif
-    
-    @php $mt = ''; @endphp
-    @if (count($unread_messages) > 0)
-    @php $mt = 'mt-5'; @endphp
-    <div class="col-12 col-lg-8 mb-2">
-        <h1 class="h5 w400">No Leídos</h1>
-    </div>
-    @endif
-    
-    @foreach ($unread_messages as $message)
-        <div class="col-12 col-lg-8 mb-2">
-            <div class="card">
-                <div class="card-body py-md-2 px-5">
-                    <div class="row">
-                        <div class="col-9 py-md-0">
-                            <div class="row">
-                                <div class="col-12 py-0">
-                                    <p class="black3 w300 p my-1">De: {{$message->name}}, {{$message->email}}</p>
-                                    <p class="black3 w400 p my-1"></p>
-                                    <p class="black3 w400 p my-1">Fecha: {{$message->date}}</p>
-                                    <p class="black3 w400 p my-1">Teléfono: @if($message->phone == NULL) {{$message->phone}}@else--@endif</p>
-                                    <hr class="my-2 hr-white3">
-                                </div>  
-                                <div class="col-12 py-0 mt-1">
-                                    <label class="black4 w500">Mensaje</label>
-                                    <p class="mb-0 w400 black2">{{$message->message}}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 pt-3 text-right">
-                            <a href="{{ url('admin/read_message/'.$message->id) }}" class="opacity-1" title="Marcar como leído"><i class="fas fa-envelope black3 mr-2"></i></a>
-                            <a onclick="return confirm('¿Estas seguro de eliminar el mensaje?')" href="{{ url('admin/delete_message/'.$message->id) }}" class="opacity-1" title="Eliminar mensaje"><i class="fas fa-trash-alt black3"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    @endforeach
 
-    @if (count($messages) > 0)
-    <div class="col-12 col-lg-8 {{$mt}} mb-2">
-        <h1 class="h5 w400">Leídos</h1>
+    <div class="col-12">
+        <div class="table-responsive-sm text-nowrap shadow">
+            <table id="dtBasicExample" class="table table-bordered" cellspacing="0" width="100%">
+                <thead class="bg-white2">
+                    <tr>
+                        <th class="th-lg">Fecha</th>
+                        <th class="th-lg">Nombre</th>
+                        <th class="th-lg">Email</th>
+                        <th class="th-lg">Mensaje</th>
+                        <th class="th-lg">Acciones</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    @foreach($messages as $message)
+                    <!-- Message row -->
+                    <tr class="{{$message->tableClassColor()}}">
+                        <td class="pl-3">
+                            {{date('d/m/Y', strtotime($message->created_at))}},
+                            {{date('h:i a', strtotime($message->created_at))}}
+                        </td>
+                        <td>{{ $message->name }}</td>
+                        <td>{{ $message->email }}</td>
+                        <td class="text-center">
+                            @if(strlen($message->message) > 0)
+                                <a href="{{ url('admin/message/'.$message->id) }}" class="btn btn-primary btn-sm btn-rounded">
+                                    Ver mensaje
+                                </a>
+                            @else
+                                (No escribió)
+                            @endif
+                        </td>
+                        {{-- <td>{{ $message->time() }}</td> --}}
+                        <td class="text-center">
+                                <form style="display: inline-block;" action="{{ url('admin/read_message/'.$message->id) }}" method="POST">
+                                    @csrf
+                                    @if($message->is_read == 1)
+                                    <button type="submit" class="bg-none b-0" title="Marcar como no leído">
+                                        <i class="fas fa-envelope-open black-c"></i>
+                                    </button>
+                                    @else
+                                    <button type="submit" class="bg-none b-0" title="Marcar como leído">
+                                        <i class="fas fa-envelope black2"></i>
+                                    </button>
+                                    @endif
+                                </form>
+                            <form style="display: inline-block;" action="{{ url('admin/delete_message/'.$message->id) }}" method="POST" onsubmit="return confirm('¿Estas seguro de eliminar el mensaje?')">
+                                @method('DELETE')
+                                @csrf
+                                <button href="{{ url('admin/message/destroy/'.$message->id) }}" class="bg-none b-0" title="Eliminar mensaje">
+                                    <i class="fas fa-trash black2 ml-2"></i></a>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+
+                    @endforeach
+                </tbody>
+            </table>
         </div>
-    @endif
-    @foreach ($messages as $message)
-        <div class="col-12 col-lg-8 mb-2">
-            <div class="card">
-                <div class="card-body py-md-2 px-5">
-                    <div class="row">
-                        <div class="col-9 py-0">
-                        <div class="row">
-                            <div class="col-12 py-0">
-                                <p class="black3 w300 p my-1">De: {{$message->name}}, {{$message->email}}</p>
-                                <p class="black3 w400 p my-1"></p>
-                                <p class="black3 w400 p my-1">Fecha: {{$message->date}}</p>
-                                <p class="black3 w400 p my-1">Teléfono: @if($message->phone == NULL) {{$message->phone}}@else--@endif</p>
-                                <hr class="my-2 hr-white3">
-                            </div>  
-                            <div class="col-12 py-0 mt-1">
-                                <label class="black4 w500">Mensaje</label>
-                                <p class="mb-0 w400 black2">{{$message->message}}</p>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="col-3 pt-3 text-right">
-                            <a title="Mensaje leído"><i class="fas fa-envelope-open black3 mr-2"></i></a>
-                            <a onclick="return confirm('¿Estas seguro de eliminar el mensaje?')" href="{{ url('admin/delete_message/'.$message->id) }}" class="opacity-1" title="Eliminar mensaje"><i class="fas fa-trash-alt black3"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    @endforeach
+    </div>
+
 </div>
 @endsection

@@ -7,6 +7,7 @@ use DB;
 use App\Area;
 use App\Post;
 use App\User;
+use App\Message;
 use Hash;
 use Auth;
 use App\Topic;
@@ -330,22 +331,42 @@ class AdminController extends Controller
     --------------------------------------------------------------*/
     public function showMessages()
     {
-        $messages = DB::table('messages')->orderByRaw('id DESC')->where('is_read', '=', 1)->get();
-        $unread_messages = DB::table('messages')->orderByRaw('id DESC')->where('is_read', '=', 0)->get();
-
         return view('admin/panel_messages',[
-            'messages' => $messages,
-            'unread_messages' => $unread_messages
+            'messages' => Message::all(),
         ]);
     }
     
+    public function showMessage($id)
+    {
+        return view('admin/panel_message',[
+            'message' => Message::where('messages.id', '=', $id)->get()->first(),
+        ]);
+    }
+
     public function readMessage($id)
     {
-        DB::table('messages')
-            ->where('id', $id)
-            ->update(['is_read' => 1]);
+        
+        $message = Message::where('messages.id', '=', $id)->get()->first();
+        if($message->is_read == 1) {
+            $message->is_read = 0;
+            $txt= ' no ';
+        }
+        else {
+            $message->is_read = 1;
+            $txt= '';
+        }
+        $message->save();
 
-        return redirect()->back()->with('success', 'Mensaje marcado como leído.');
+        return redirect()->back()->with('success', 'Mensaje marcado como'.$txt.' leído.');
+    }
+
+    public function unreadMessage($id)
+    {
+        $message = Message::find($id)->first();
+        $message->is_read = 0;
+        $message->save();
+
+        return redirect()->back()->with('success', 'Mensaje marcado como no leído.');
     }
 
     public function deleteMessage($id)

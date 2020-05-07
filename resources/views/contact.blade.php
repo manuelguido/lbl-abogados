@@ -109,7 +109,7 @@
                                     <div class="col-12 col-md-6 text-center">
                                         <div class="whatsapp-box">
                                             <h1 class="h4 mt-auto mb-3 align-middle">O chatea con nosotros!</h1>
-                                            <a target="_blank" href="https://api.whatsapp.com/send?phone=+5491125034400&text=Hola, quisiera consultar sobre" class="btn btn-success m-0 py-3"><i class="fab fa-whatsapp white1 icon-md mr-2"></i><span class="w700 white1 p">Whatsapp</span></a>
+                                            <a target="_blank" href="https://api.whatsapp.com/send?phone=+5491125034400&text=Hola, quisiera consultar sobre" class="btn btn-success m-0 w600"><i class="fab fa-whatsapp fa-lg white1 mr-2"></i>Whatsapp</a>
                                         </div>
                                     </div>
                                 </div>

@@ -9,7 +9,7 @@
         <div class="login-modal">
             <div class="container-fluid">
                 <div class="row justify-content-center">
-                    <img src="{{ asset('img/artwork/login.webp') }}" class="login-logo">
+                    <img src="{{ asset('img/artwork/login.png') }}" class="login-logo">
                 </div>
                 <div class="row justify-content-center px-5">
                     <div class="col-12 col-lg-3">

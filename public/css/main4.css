@@ -84,7 +84,7 @@ nav, nav * {
 .display-b { display: block !important;}
 .overflow-h { overflow: hidden !important; }
 .shadow-none { box-shadow: none !important; }
-.border-none { border: 0 none !important; }
+.border-none, .b-0 { border: 0 none !important; }
 .cursor-p { cursor: pointer !important; }
 .cursor-d { cursor: default !important; }
 .cursor-na { cursor: not-allowed !important; }
@@ -164,9 +164,7 @@ p {
 /*--------------------------------------------------------------
     Buttons
 --------------------------------------------------------------*/
-.btn {
-    padding: .6em 1.5em !important;
-}
+
 .btn i {
     color: inherit !important;
 }
@@ -692,11 +690,10 @@ main.panel {
     background: var(--white-1);
 }
 .panel-header #panel-title {
-    letter-spacing: .1em;
-    font-size: 1.2em;
-    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-size: 1.1em;
     color: var(--black-2);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 /*Content*/
@@ -748,4 +745,15 @@ main.panel {
 }
 .table-button-group .table-button i, .btn-crud i {
     color: var(--black-2);
+}
+
+
+.limit {
+    width: 100% !important;
+    word-wrap: break-word !important;
+    overflow-y: scroll;
+}
+.limit p {
+    display: inline-block !important;
+    word-wrap: break-word !important;
 }
