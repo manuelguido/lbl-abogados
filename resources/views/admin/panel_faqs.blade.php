@@ -11,7 +11,7 @@
 <!-- Row -->
 <div class="row justify-content-center">
     <!-- Col -->
-    <div class="col-12 col-lg-6 mb-5">
+    <div class="col-12 col-lg-8 mb-5">
         <!-- Card -->
         <div class="card">
             <!-- Card header -->
@@ -90,7 +90,7 @@
 <!-- Row -->
 <div class="row justify-content-center">
     <!-- Col -->
-    <div class="col-12 col-lg-6 mb-5">
+    <div class="col-12 col-lg-8 mb-5">
         <!-- Card -->
         <div class="card">
             <!-- Card header -->

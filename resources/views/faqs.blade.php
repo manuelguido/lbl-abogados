@@ -72,7 +72,7 @@
     </div>
     <!-- Full Page Intro -->
 
-    <div class="container-fluid py-5 px-4 px-md-5">
+    <div class="container-fluid py-5 px-4 px-md-5 all-raleway">
         <div class="row justify-content-center px-lg-5 mb-4">
             <div class="col-12 col-lg-10">
                 <h1 class="h2 w500 primary-dark">Preguntas frecuentes</h1>

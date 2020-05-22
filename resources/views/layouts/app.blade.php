@@ -15,7 +15,7 @@
     <script src="https://kit.fontawesome.com/6a517933d5.js" crossorigin="anonymous"></script>
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/mdb.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/main4.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main5.css') }}" rel="stylesheet">
     <!-- Custom -->
     @yield('header')
 </head>

@@ -221,7 +221,7 @@
                                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                         @foreach($topics as $topic)
                                         @if (count($faqs->where('topic_name', $topic->topic_name)) > 0)
-                                        <div class="row mt-4 faq-list display-none">
+                                        <div class="row mt-4 faq-list display-none all-raleway">
                                             @foreach ($faqs->where('topic_name', $topic->topic_name) as $faq)
                                             <div class="col-12 col-xl-10 mb-4">
                                                 <h2 class="h7">

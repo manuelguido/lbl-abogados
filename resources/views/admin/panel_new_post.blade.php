@@ -4,7 +4,6 @@
 
 @section('header')
     @include('components.text_editor_header')
-    @include('components.text_editor_css')
 @endsection
 
 @section('panel-content')
