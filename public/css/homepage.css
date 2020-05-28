@@ -1,0 +1,23 @@
+html, body, header, .view {
+    height: 80%;
+}
+.banner-logo {
+    width: 13vw;
+    margin: 0 auto;
+}
+@media (max-width: 740px) {
+    html, body, header, .view {
+        height: 75vh;
+    }
+    .banner-logo {
+        width: 60vw;
+    }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+    html, body, header, .view {
+        height: 70vh;
+    }
+    .banner-logo {
+        width: 40vw;
+    }
+}

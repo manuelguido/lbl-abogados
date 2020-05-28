@@ -4,55 +4,13 @@
 
 @include('components.nav')
 
+@section('header')
+<link href="{{ asset('css/homepage.css') }}" rel="stylesheet">
+@endsection
+
 @section('content')
 
 @include('components.whatsapp_icon')
-
-    <style type="text/css">
-        html, body, header, .view {
-            height: 80%;
-        }
-        .banner-logo {
-            width: 13vw;
-            margin: 0 auto;
-        }
-        @media (max-width: 740px) {
-            html, body, header, .view {
-                height: 75vh;
-            }
-            .banner-logo {
-                width: 60vw;
-            }
-        }
-        @media (min-width: 800px) and (max-width: 850px) {
-            html, body, header, .view {
-                height: 70vh;
-            }
-            .banner-logo {
-                width: 40vw;
-            }
-        }
-  </style>
-
-<script>
-    window.onload = function() {
-        faqsSwitch(0);
-    }
-    //Switch de panel
-    function faqsSwitch(n) {
-        var menuItems = document.getElementsByClassName('faq-menu-item');
-        var subItems = document.getElementsByClassName('faq-list');
-        var title = document.getElementById('faq-title');
-        
-        for(var i = 0; i < subItems.length; i++) {
-            subItems[i].classList.add("display-none");
-            menuItems[i].classList.remove("active");
-        }
-        menuItems[n].classList.add("active");
-        subItems[n].classList.remove("display-none");
-        title.innerHTML = menuItems[n].innerHTML;
-    }
-</script>
 
     <!-- Full Page Intro -->
     <div class="view full-page-intro" style="background-image: url('{{ asset ('storage/site/'.$config->home_img) }}'); background-repeat: no-repeat; background-size: cover;">
@@ -244,4 +202,8 @@
     </div>
 
 @include('components.footer')
+@endsection
+
+@section('scripts')
+<script src="{{ asset('js/homepage.js') }}"></script>
 @endsection

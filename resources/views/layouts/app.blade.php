@@ -14,14 +14,16 @@
     <script src="https://kit.fontawesome.com/6a517933d5.js" crossorigin="anonymous"></script>
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/mdb.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/main5.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/application.css') }}" rel="stylesheet">
     <!-- Custom -->
     @yield('header')
 </head>
 <body>
+
     <div id="app">
         @yield('content')
     </div>
+
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/mdb.min.js') }}"></script>
@@ -32,5 +34,7 @@
             $(".alert-fixed").slideUp(500);
         });
     </script>
+    <!-- Custom -->
+    @yield('scripts')
 </body>
 </html>
