@@ -55,14 +55,14 @@
     <div class="container-fluid py-5 px-4 px-md-5">
         <div class="row mb-5 justify-content-center">
             <div class="col-12 col-xl-10 py-5">
-                <h1 class="h2 w500 primary-dark">Noticias</h1>
+                <h1 class="h2 w500 primary-dark">Novedades</h1>
                 <hr class="my-3">
             </div>
             <div class="col-12 col-xl-10">
                 <div class="row row-eq-height">
                     @foreach ($news as $new)            
                         <div class="col-12 col-xl-4 mb-4">
-                            <a href="/noticia/{{$new->post_id}}" class="card new-card">
+                            <a href="/novedad/{{$new->post_id}}" class="card new-card">
                                 <div class="card-body p-5">
                                     <div class="row">
                                         <div class="col-12 col-xl-8 mb-xl-4">

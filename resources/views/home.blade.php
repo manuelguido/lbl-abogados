@@ -97,7 +97,7 @@
                 <!-- Card -->
                 <div class="card card-bordered">
                     <div class="card-header bg-none border-none">
-                        <h1 class="h4 color5 w500 display-inline">Noticias</h1>
+                        <h1 class="h4 color5 w500 display-inline">Novedades</h1>
                         <hr>
                     </div>
                     <!-- Card body -->

@@ -285,7 +285,7 @@ class AdminController extends Controller
     public function showPosts()
     {
         //->format('Y-m-d');
-        $posts = DB::table('posts')->select('post_id', 'title', 'date')->get();
+        $posts = DB::table('posts')->select('post_id', 'title', 'date')->orderByRaw('post_id DESC')->get();
         return view(
             'admin/panel_posts',
             ['posts' => $posts]

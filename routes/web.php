@@ -6,6 +6,8 @@ Route::get('/', 'PublicController@showHome');
 Route::get('/contacto', 'PublicController@showContact');
 Route::get('/noticias', 'PublicController@showNews');
 Route::get('/noticia/{id}', 'PublicController@showNew');
+Route::get('/novedades', 'PublicController@showNews');
+Route::get('/novedad/{id}', 'PublicController@showNew');
 Route::get('/sobre_nosotros', 'PublicController@showAboutUs');
 Route::get('/faqs', 'PublicController@showFaqs');
 Route::get('/faq/{id}', 'PublicController@showFaq');

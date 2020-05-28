@@ -1,7 +1,7 @@
 <!-- Navbar -->
-<nav class="main-navbar navbar navbar-expand-xl navbar-dark shadow-none fixed-top">
+<nav class="main-navbar navbar navbar-expand-md navbar-dark shadow-none fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
+        <a class="navbar-brand uns" href="{{ url('/') }}">
             LB&L Abogados
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent    " aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -15,7 +15,7 @@
                     <a class="nav-link" href="{{ url('/') }}">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/noticias') }}">Noticias</a>
+                    <a class="nav-link" href="{{ url('/novedades') }}">Novedades</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/sobre_nosotros') }}">Sobre Nosotros</a>

@@ -60,7 +60,7 @@
 	</div>
 	<!-- Footer Links -->
 	<!-- Copyright -->
-	<div class="footer-copyright text-center py-4">
+	<div class="footer-copyright text-center py-4 uns">
 		<div class="row px-5 justify-content-center">
 			<div class="col-12 col-md-6 text-left">
 				<p class="my-0 white1 w400"> © 2019 <a class="primary" href="/">LB&L Abogados</a> Todos los derechos reservados.</p>
