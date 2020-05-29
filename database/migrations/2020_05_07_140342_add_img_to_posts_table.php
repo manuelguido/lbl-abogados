@@ -13,7 +13,7 @@ class AddImgToNewsTable extends Migration
      */
     public function up()
     {
-        Schema::table('news', function (Blueprint $table) {
+        Schema::table('posts', function (Blueprint $table) {
             $table->string('img');
         });
     }
@@ -25,7 +25,7 @@ class AddImgToNewsTable extends Migration
      */
     public function down()
     {
-        Schema::table('news', function (Blueprint $table) {
+        Schema::table('posts', function (Blueprint $table) {
             $table->string('img');
         });
     }
