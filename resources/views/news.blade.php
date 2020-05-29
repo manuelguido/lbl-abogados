@@ -2,7 +2,7 @@
 
 @include('components.nav')
 
-@section('title', 'LB&L Noticias')
+@section('title', 'LB&L Novedades')
 
 @section('content')
 

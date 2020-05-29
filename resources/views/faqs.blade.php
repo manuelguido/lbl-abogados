@@ -103,8 +103,8 @@
                             <div class="row mt-4 faq-list display-none">
                                 @foreach ($faqs as $faq)
                                 <div class="col-12 col-lg-10 mb-4">
-                                    <h2 class="h6">
-                                    <span class="h6 w500 primary-dark mb-0 text-uppercase pt-0">{{$faq->question}}</span><br class="mb-3">
+                                    <h2 class="h5">
+                                    <span class="h5 w500 primary-dark mb-0 text-uppercase pt-0">{{$faq->question}}</span><br class="mb-3">
                                     <span class="p black1 mb-5">{!!$faq->answer!!}</span>
                                     </h2>
                                 </div>
@@ -115,8 +115,8 @@
                             <div class="row mt-4 faq-list display-none">
                                 @foreach ($faqs->where('topic_name', $topic->topic_name) as $faq)
                                 <div class="col-12 col-lg-10 mb-4">
-                                    <h2 class="h6">
-                                    <span class="h6 w500 primary-dark mb-0 text-uppercase pt-0">{{$faq->question}}</span><br class="mb-3">
+                                    <h2 class="h5">
+                                    <span class="h5 w500 primary-dark mb-0 text-uppercase pt-0">{{$faq->question}}</span><br class="mb-3">
                                     <span class="p black1 mb-5">{!!$faq->answer!!}</span>
                                     </h2>
                                 </div>
