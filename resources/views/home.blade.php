@@ -128,6 +128,9 @@
             <!-- /.FAQS -->
             <div class="col-12 col-lg-8">
                 <div class="row">
+                    <div class="col-12 col-lg-4">
+                        @include('components.home.buttons')
+                    </div>
                     <div class="col-12 col-lg-8">
                         <!-- Card -->
                         <div class="card card-bordered">
@@ -154,9 +157,6 @@
                             <!-- /.Card body -->
                         </div>
                         <!-- /.Card -->
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        @include('components.home.buttons')
                     </div>
                 </div>
             </div>
