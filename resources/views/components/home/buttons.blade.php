@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row mb-5">
     <div class="col-12 text-center">
         <a href="{{ url('sobre_nosotros') }}" class="home-card card">
             <div class="card-body">
