@@ -35,7 +35,7 @@
 						<a class="white1" href="/">Inicio</a>
 					</li>
 					<li class="my-2">
-						<a class="white1" href="/noticias">Noticias</a>
+						<a class="white1" href="/novedades">Novedades</a>
 					</li>
 					<li class="my-2">
 						<a class="white1" href="/sobre_nosotros">Sobre Nosotros</a>

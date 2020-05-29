@@ -82,8 +82,8 @@
                                             <p class="p black3">{!!$area->description!!}</p>
                                         </div>
                                         <div class="col-lg-3 text-lg-right">
-                                            <a href="{{ url('admin/modify_area/'.$area->area_id) }}" class="table-button" title="Modificar noticia"><i class="fas fa-edit black3 mr-2"></i></a>
-                                            <a onclick="return confirm('¿Estas seguro de eliminar el área?')" href="{{ url('admin/delete_area/'.$area->area_id) }}" class="table-button" title="Eliminar noticia"><i class="fas fa-trash-alt black3"></i></a>      
+                                            <a href="{{ url('admin/modify_area/'.$area->area_id) }}" class="table-button" title="Modificar area"><i class="fas fa-edit black3 mr-2"></i></a>
+                                            <a onclick="return confirm('¿Estas seguro de eliminar el área?')" href="{{ url('admin/delete_area/'.$area->area_id) }}" class="table-button" title="Eliminar area"><i class="fas fa-trash-alt black3"></i></a>      
                                         </div>
                                     </div>
                                 </div>

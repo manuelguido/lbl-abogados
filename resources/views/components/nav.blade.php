@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="main-navbar navbar navbar-expand-md navbar-dark shadow-none fixed-top">
+<nav class="main-navbar navbar navbar-expand-xl navbar-dark shadow-none fixed-top">
     <div class="container">
         <a class="navbar-brand uns" href="{{ url('/') }}">
             LB&L Abogados
@@ -26,6 +26,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/contacto') }}">Contacto</a>
                 </li>
+                @auth
+                <li class="nav-item">
+                    <a class="nav-link my-1" href="{{ url('/admin') }}"><i class="fas fa-user-shield fa-lg primary"></i></a>
+                </li>
+                @endauth
             </ul>
         </div>
     </div>

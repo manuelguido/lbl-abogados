@@ -15,8 +15,9 @@
                     <h1 id="navbar-brand" class="navbar-brand">LB&L Abogados</h1>
                 </nav>
                 <!--/.Navbar -->
-                <div class="row m-0 px-0 py-4">
+                <div class="row m-0 px-0">
                     <div class="col-md-12 px-4">
+                        <a href="{{ url('/') }}" target="_blank" class="btn btn-primary btn-block waves-effect"><i class="fas fa-globe-americas mr-2"></i>Ir al sitio</a>
                         <h3 class="mt-4">MENSAJES</h3>
                         <a href="{{ url('admin/messages') }}" class="menuItem"><i class="fas fa-envelope mr-2"></i>Mensajes recibidos</a>
                         <!-- Noticias -->
@@ -38,7 +39,6 @@
                         <h3 class="mt-4">CONFIGURACIÓN</h3> 
                         <a href="{{ url('admin/profile') }}" class="menuItem"><i class="fas fa-user mr-2"></i>Mi cuenta</a>
                         <a href="{{ url('admin/users') }}" class="menuItem"><i class="fas fa-users mr-2"></i>Usuarios</a>
-                        <a href="{{ url('/') }}" target="_blank" class="menuItem"><i class="fas fa-globe-americas mr-2"></i>Ir al sitio</a>
                         <!-- /.Mi Cuenta -->
                         <!-- Logout -->
                         <a class="menuItem" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
