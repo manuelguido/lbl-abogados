@@ -64,8 +64,8 @@
                     <div class="row form-group">
                         <div class="col-12 mb-3">
                             <label class="w500 black3">Tema</label>
-                            <select name="topic_id" class="browser-default custom-select">
-                                <option value="0" selected>Seleccionar</option>
+                            <select name="topic_id" class="browser-default custom-select" required>
+                                <option value="0" selected>Todas</option>
                                 @foreach ($topics as $topic)
                                 <option value="{{$topic->topic_id}}">{{$topic->topic_name}}</option>
                                 @endforeach

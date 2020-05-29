@@ -71,8 +71,8 @@
                     <div class="row form-group">
                         <div class="col-12 mb-3">
                             <label>Tema</label>
-                            <select name="topic_id" class="browser-default custom-select">
-                                <option value="0">Seleccionar</option>
+                            <select name="topic_id" class="browser-default custom-select" required>
+                                <option value="0">Todas</option>
                                 @foreach ($topics as $topic)
                                 @if ($topic->topic_id == $faq->topic_id)
                                 <option value="{{$topic->topic_id}}" selected>{{$topic->topic_name}}</option>
