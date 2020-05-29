@@ -65,7 +65,7 @@
                         <div class="col-12 mb-3">
                             <label class="w500 black3">Tema</label>
                             <select name="topic_id" class="browser-default custom-select" required>
-                                <option value="0" selected>Todas</option>
+                                <option value="0" selected>Todas (Sin tema)</option>
                                 @foreach ($topics as $topic)
                                 <option value="{{$topic->topic_id}}">{{$topic->topic_name}}</option>
                                 @endforeach
@@ -125,9 +125,9 @@
                                             </p>
                                             <p class="black2 mt-3">Tema: 
                                             @if ($faq->topic_id <> NULL)
-                                                <span class="info-dark">{{$faq->topic_name}}</span>
+                                                <span class="primary">{{$faq->topic_name}}</span>
                                             @else
-                                                <span class="primary">Sin tema</span>
+                                                <span class="primary">Sin tema (Se muestra en todas)</span>
                                             @endif
                                             </p>
                                         </div>

@@ -72,7 +72,7 @@
                         <div class="col-12 mb-3">
                             <label>Tema</label>
                             <select name="topic_id" class="browser-default custom-select" required>
-                                <option value="0">Todas</option>
+                                <option value="0">Todas (Sin tema)</option>
                                 @foreach ($topics as $topic)
                                 @if ($topic->topic_id == $faq->topic_id)
                                 <option value="{{$topic->topic_id}}" selected>{{$topic->topic_name}}</option>
