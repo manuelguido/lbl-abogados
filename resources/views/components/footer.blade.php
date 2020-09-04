@@ -65,9 +65,9 @@
 			<div class="col-12 col-md-6 text-left">
 				<p class="my-0 white1 w400"> © 2019 <a class="primary" href="/">LB&L Abogados</a> Todos los derechos reservados.</p>
 			</div>
-			<div class="col-12 col-md-6 text-left text-md-right pr-md-5">
+			{{-- <div class="col-12 col-md-6 text-left text-md-right pr-md-5">
 				<p class="my-0 white1 mr-md-5 w400">Diseñado y desarrollado por: <a class="primary" href="https://zebradevs.com/">Zebra Devs</a></p>
-			</div>
+			</div> --}}
 		</div>
 	</div>
 	<!-- Copyright -->
